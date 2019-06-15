@@ -123,6 +123,14 @@
     </p>
     <p>
         <h4>Task 12</h4>
+        <?php
+            $arr = [
+                'ru' => ['понедельник', "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"],
+                'en' => ['monday', 'tusday', 'wednesday', 'chetverg', 'friday', 'saterday', 'sunday']
+            ];
+            echo $arr['ru'][0] . '<br>';
+            echo $arr['en'][2];
+        ?>
     </p>
     <p>
         <h4>Task 13</h4>
