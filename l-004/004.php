@@ -20,25 +20,81 @@
     </p>
 
     <p>
-        <h4>Task 2</h4><?php ?>
+        <h4>Task 2</h4>
+        <?php 
+            $a = 1;
+            if ($a > 0) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 3</h4><?php ?>
+        <h4>Task 3</h4>
+        <?php 
+            $a = 1;
+            if ($a < 0) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 4</h4><?php ?>
+        <h4>Task 4</h4>
+        <?php 
+            $a = 1;
+            if ($a >= 0) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 5</h4><?php ?>
+        <h4>Task 5</h4>
+        <?php 
+            $a = '1';
+            if ($a <= 0) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 6</h4><?php ?>
+        <h4>Task 6</h4>
+        <?php 
+            $a = '1';
+            if ($a != 0) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 7</h4><?php ?>
+        <h4>Task 7</h4>
+        <?php 
+            $a = '1';
+            if ($a == 'test') {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 8</h4><?php ?>
+        <h4>Task 8</h4>
+        <?php 
+            $a = '1';
+            if ($a === 1) {
+                echo "Верно";
+            } else {
+                echo "Неверно";
+            }
+        ?>
     </p>
     <p>
         <h4>Task 9</h4><?php ?>
