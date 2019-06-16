@@ -96,17 +96,52 @@
             }
         ?>
     </p>
+
+<hr>
+    
     <p>
-        <h4>Task 9</h4><?php ?>
+        <h4>Task 9</h4>
+        <?php 
+            $a = false;
+            if (empty($a)) {
+                echo $a.' empty';
+            } else {
+                echo $a.' not empty';
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 10</h4><?php ?>
+        <h4>Task 10</h4>
+        <?php 
+            $a = false;
+            if (!empty($a)) {
+                echo $a.' not empty';
+            } else {
+                echo $a.' empty';
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 11</h4><?php ?>
+        <h4>Task 11</h4>
+        <?php 
+            $a = null;
+            if (isset($a)) {
+                echo $a.' isset';
+            } else {
+                echo $a.' not isset';
+            }
+        ?>
     </p>
     <p>
-        <h4>Task 12</h4><?php ?>
+        <h4>Task 12</h4>
+        <?php 
+            $a = null;
+            if (!isset($a)) {
+                echo $a.' not isset';
+            } else {
+                echo $a.' isset';
+            }
+        ?>
     </p>
     <p>
         <h4>Task 13</h4><?php ?>
