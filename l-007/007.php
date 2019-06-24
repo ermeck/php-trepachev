@@ -261,84 +261,236 @@
     </p>
     <p>
         <h4>Task 28</h4>
+        <?php
+            $str2 = implode(', ', $arr);
+            echo $str2;
+        ?>
     </p>
     <p>
         <h4>Task 29</h4>
+        <?php
+            $date = '2013-12-31';
+            $date_arr = explode('-', $date);
+            $new_date = $date_arr[2].'.'.$date_arr[1].'.'.$date_arr[0];
+            echo $new_date;
+        ?>
     </p>
+
+    <h2>Работа с str_split</h2>
     <p>
         <h4>Task 30</h4>
+        <?php
+            $str = '1234567890';
+            $arr = str_split($str, 2);
+            echo '<pre>';
+            var_dump($arr);
+            echo '</pre>';
+        ?>
     </p>
     <p>
         <h4>Task 31</h4>
+        <?php
+            $str = '1234567890';
+            $arr = str_split($str);
+            echo '<pre>';
+            var_dump($arr);
+            echo '</pre>';
+        ?>
     </p>
     <p>
         <h4>Task 32</h4>
+        <?php
+            $str = '1234567890';
+            $arr = str_split($str, 2);
+            $str = implode('-', $arr);
+            echo $str;
+        ?>
     </p>
     <p>
         <h4>Task 33</h4>
+        <?php
+            $str = ' Hello ';
+            echo trim($str);
+        ?>
     </p>
     <p>
         <h4>Task 34</h4>
+        <?php
+            $str = '/php/';
+            echo trim($str, '/');
+        ?>
     </p>
     <p>
         <h4>Task 35</h4>
+        <?php
+            $str = ' слова слова слова ';
+            $str = rtrim($str, '. ');
+            $str = $str . '.';
+            echo $str;
+        ?>
     </p>
     <p>
         <h4>Task 36</h4>
+        <?php
+            $str = '12345';
+            $str = strrev($str);
+            echo $str;
+        ?>
     </p>
     <p>
         <h4>Task 37</h4>
+        <?php
+            $arr = ['madam', 'otto', 'kayak', 'nun', 'level', 'ermeck'];
+            foreach ($arr as $value) {
+                if ($value == strrev($value)) {
+                    echo $value . ' - палиндром<br>';
+                } else {
+                    echo $value . ' - не палиндром<br>';
+                }
+            }
+        ?>
     </p>
+
+    <h2>Работа с str_shuffle</h2>
     <p>
         <h4>Task 38</h4>
+        <?php
+            $str = 'Hello world!';
+            echo str_shuffle($str);
+        ?>
     </p>
     <p>
         <h4>Task 39</h4>
+        <?php
+            $str = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
+            $arr = explode(' ', $str);
+            $str = str_shuffle(strtolower(implode('', $arr)));
+            $word_six = substr($str, 0, 6);
+            echo $word_six;
+        ?>
     </p>
+
+    <h2>Работа с number_format</h2>
     <p>
         <h4>Task 40</h4>
+        <?php
+            $s = 1234567890;
+            echo number_format($s, 0, '', ' ');
+        ?>
     </p>
+
+    <h2>Работа с str_repeat</h2>
     <p>
         <h4>Task 41</h4>
+        <?php
+            for ($i = 1; $i <= 9; $i++) {
+                echo str_repeat('x', $i).'<br>';
+            }
+        ?>
     </p>
     <p>
         <h4>Task 42</h4>
+        <?php
+            for ($i = 1; $i <= 9; $i++) {
+                echo str_repeat($i, $i).'<br>';
+            }
+        ?>
     </p>
+
+    <h2>Работа с strip_tags и htmlspecialchars</h2>
     <p>
         <h4>Task 43</h4>
+        <?php
+            $s = 'html, <b>php</b>, js';
+            echo $s.'<br>';
+            echo strip_tags($s).'<br>';
+            echo $s;
+        ?>
     </p>
     <p>
         <h4>Task 44</h4>
+        <?php
+            $s = '<table><tr><td>To <b>be</b> or <i>not</i> to be<td></tr></table>';
+            echo strip_tags($s, '<b><i>');
+        ?>
     </p>
     <p>
         <h4>Task 45</h4>
+        <?php
+            $s = 'html, <b>php</b>, js';
+            echo '<pre>';
+            echo htmlspecialchars($s);
+            echo '</pre>';
+        ?>
     </p>
+
+    <h2>Работа с chr и ord</h2>
     <p>
         <h4>Task 46</h4>
+        <?php
+            echo ord('a').'<br>';
+            echo ord('b').'<br>';
+            echo ord('c').'<br>';
+            echo ord(' ').'<br>';
+        ?>
     </p>
     <p>
         <h4>Task 47</h4>
+        <a href="http://www.asciitable.com/">Таблица ASCII</a>
     </p>
     <p>
         <h4>Task 48</h4>
+        <?php
+            echo chr(33);
+        ?>
     </p>
     <p>
         <h4>Task 49</h4>
+        <?php
+            echo chr(rand(65, 90));
+        ?>
     </p>
     <p>
         <h4>Task 50</h4>
+        <?php
+            $len = 5;
+            for ($i = 0; $i < $len; $i++) {
+                echo chr(rand(97, 122));
+            }
+        ?>
     </p>
     <p>
         <h4>Task 51</h4>
+        <?php
+            $char = 'b';
+            if (ord($char) >= 65 && ord($char) <= 90) {
+                echo '<b>'.$char .'</b> - большая';
+            } else {
+                echo '<b>'.$char .'</b> - маленькая';
+            }
+        ?>
     </p>
+
+    <h2>Работа с strchr, strrchr</h2>
     <p>
         <h4>Task 52</h4>
+        <?php
+            $str = 'ab-cd-ef';
+            echo strchr($str, '-');
+        ?>
     </p>
     <p>
         <h4>Task 53</h4>
+        <?php
+            echo strrchr($str, '-');
+        ?>
     </p>
     <p>
         <h4>Task 54</h4>
+        <?php
+            $str = 'ab--cd--ef';
+            echo strstr($str, '--');
+        ?>
     </p>
     <p>
         <h4>Task 55</h4>
