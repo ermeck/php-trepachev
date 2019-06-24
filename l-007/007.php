@@ -485,6 +485,8 @@
             echo strrchr($str, '-');
         ?>
     </p>
+
+    <h2>Работа с strstr</h2>
     <p>
         <h4>Task 54</h4>
         <?php
@@ -492,11 +494,35 @@
             echo strstr($str, '--');
         ?>
     </p>
+
+    <h2>Задачи</h2>
     <p>
         <h4>Task 55</h4>
+        <?php
+            $s = 'var_test_text';
+            $arr = explode('_', $s);
+            $s = $arr[0];
+            for($i=1; $i<count($arr); $i++) {
+                $arr[$i] = ucfirst($arr[$i]);
+                $s .= $arr[$i];
+            }
+            echo $s;
+        ?>
     </p>
     <p>
         <h4>Task 56</h4>
+        <?php
+            $arr = [312, 456, 423];
+            foreach($arr as $value) {
+                $s = (string)$value;
+                for ($i = 0; $i < strlen($s); $i++) {
+                    if ($s[$i] == '3') {
+                        echo $value.'<br>';
+                        break;
+                    }
+                }
+            }
+        ?>
     </p>
 
 </body>
